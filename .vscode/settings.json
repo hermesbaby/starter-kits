@@ -1,0 +1,40 @@
+//###############################################################
+//#                                                             
+//#  This file is part of StarterKits
+//#
+//#  Copyright (c) 2024 Alexander Mann-Wahrenberg (basejumpa)
+//#
+//#      https://github.com/basejumpa
+//#
+//#  License(s)
+//#  
+//#  - MIT for contents used as software
+//#  - CC BY-SA-4.0 for contents used as method or otherwise
+//#  
+//###############################################################
+
+
+{
+    "vsicons.presets.hideExplorerArrows": true,
+
+    //"vsicons.presets.foldersAllDefaultIcon": true,
+
+    "files.exclude": {
+        ".extensions/": true,
+        ".user/": true
+    },
+
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 120,
+    "editor.rulers": [ 100, 120 ]
+
+    "code-eol.newlineCharacter": "¬",
+    "code-eol.returnCharacter" : "¤",
+    "code-eol.crlfCharacter"   : "¤¬",
+
+    "indentRainbow.excludedLanguages": ["yaml"]
+}
