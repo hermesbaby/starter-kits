@@ -1,0 +1,23 @@
+{
+    "vsicons.presets.hideExplorerArrows": true,
+    "vsicons.presets.foldersAllDefaultIcon": true,
+
+    "files.exclude": {
+        ".tools/": true,
+        ".venv/": true
+    },
+
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 120,
+    "editor.rulers": [ 100, 120 ]
+
+    "code-eol.newlineCharacter": "¬",
+    "code-eol.returnCharacter" : "¤",
+    "code-eol.crlfCharacter"   : "¤¬",
+
+    "indentRainbow.excludedLanguages": ["yaml"]
+}

@@ -1,0 +1,26 @@
+# In-repository virtual python environment with poetry
+/.venv/
+
+# Tool folder
+/.tools/
+
+
+# We don't nail down the versions. Let's always get the hottest stuff.
+# We are here at playground phase of a toy project, so no serious release is coming up.
+# Being-up-to-date beats stability and reproducibility here.
+/poetry.lock
+
+# Documentation build folder
+/out/
+
+# Temporary files
+~$*
+.$*
+
+# Any pycache-files which might appear
+__pycache__/
+
+
+# Backup of configuration
+.config.old
+
