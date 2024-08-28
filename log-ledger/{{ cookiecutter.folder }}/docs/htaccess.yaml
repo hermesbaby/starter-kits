@@ -1,0 +1,7 @@
+ldap-user:
+    - dso
+    - hf
+    - mp
+
+ldap-group:
+    - DE-WI_GG_LOC_Wiesbaden

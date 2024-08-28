@@ -13,6 +13,9 @@
 # Documentation build folder
 /out/
 
+
+## Temporary esbonio files
+esbonio.*
 # Temporary files
 ~$*
 .$*
@@ -20,6 +23,8 @@
 # Any pycache-files which might appear
 __pycache__/
 
+# Junction to today's folder
+/today/
 
 # Backup of configuration
 .config.old

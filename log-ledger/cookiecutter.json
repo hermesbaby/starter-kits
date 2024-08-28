@@ -1,4 +1,9 @@
 {
-    "folder": "some-folder",
-    "thing": "My Log Ledger"
+    "username": "bgates",
+    "folder": "log-ledger",
+    "thing": "Log Ledger",
+
+    "_copy_without_render": [
+        "mk-my-day.sh"
+    ]
 }

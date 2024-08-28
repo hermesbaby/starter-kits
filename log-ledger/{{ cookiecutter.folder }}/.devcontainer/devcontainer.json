@@ -1,0 +1,5 @@
+{
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "biomechdevdocs_linux",
+    "workspaceFolder": "/MNT/c/Data/D/projects/BIOM/BiomechDevDocs"
+}

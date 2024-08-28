@@ -1,17 +1,50 @@
 {
     "recommendations": [
         "vscode-icons-team.vscode-icons",
+        "johnpapa.vscode-peacock",
 
         "editorconfig.editorconfig",
         "medo64.render-crlf",
+        "miku3920.vscode-render-special-chars",
         "oderwat.indent-rainbow",
+        "mechatroner.rainbow-csv",
+
+        "alefragnani.bookmarks",
+        "gruntfuggly.todo-tree",
 
         "mhutchie.git-graph",
-        "donjayamanne.githistory",
-        "waderyan.gitblame",
-        "solomonkinard.git-blame",
+        "adam-bender.commit-message-editor",
         "david-rickard.git-diff-and-merge-tool",
+        "ryu1kn.partial-diff",
         "scootersoftware.bcompare-vscode",
-        "adam-bender.commit-message-editor"
+
+        "tomoki1207.pdf"
+
+        "lextudio.restructuredtext",
+        "trond-snekvik.simple-rst",
+        "swyddfa.esbonio",
+
+        "actboy168.tasks",
+        "forbeslindesay.forbeslindesay-taskrunner",
+
+        "dendron.dendron-paste-image",
+        "hediet.vscode-drawio",
+
+        "jebbs.plantuml",
+        "bierner.markdown-mermaid",
+        "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+        "tintinweb.graphviz-interactive-preview",
+
+        "rulyotano.tree-extended",
+
+        "danlevett.pattern-links",
+
+
+
+        "ionutvmi.path-autocomplete",
+        "rssowl.copy-relative-path-posix",
+        "brokensandals.paste-relative-path",
+        "ionutvmi.path-autocomplete"
+
     ]
 }
