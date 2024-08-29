@@ -1,7 +1,6 @@
 {
-    "username": "bgates",
-    "folder": "log-ledger",
-    "thing": "Log Ledger",
+    "thing": "log-ledger",
+    "username": "craig",
 
     "_copy_without_render": [
         "mk-my-day.sh"

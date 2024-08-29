@@ -1,6 +1,0 @@
-[
-    {
-        "key": "shift+win+f",
-        "command": "extension.pasteImage"
-    }
-]

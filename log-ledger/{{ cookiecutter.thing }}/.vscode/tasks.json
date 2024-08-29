@@ -1,0 +1,383 @@
+//################################################################
+//#                                                              #
+//#  This file is part of hermesbaby                             #
+//#                       the software engineer's typewriter     #
+//#                                                              #
+//#  Copyright (c) 2024 Alexander Mann-Wahrenberg (basejumpa)    #
+//#                                                              #
+//#      https://github.com/basejumpa                            #
+//#                                                              #
+//#  License(s)                                                  #
+//#                                                              #
+//#  - MIT for contents used as software                         #
+//#  - CC BY-SA-4.0 for contents used as method or otherwise     #
+//#                                                              #
+//################################################################
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "check-and-push",
+            "type": "shell",
+            "command": "make -f docs/Makefile check-and-push",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "check-and-push-force-with-lease",
+            "type": "shell",
+            "command": "make -f docs/Makefile check-and-push-force-with-lease",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make -f docs/Makefile clean",
+            "options": {
+                "statusbar": {
+                    "hide": false
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "clean-install",
+            "type": "shell",
+            "command": "make -f docs/Makefile clean-install",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "clean-publish-orphans",
+            "type": "shell",
+            "command": "make -f docs/Makefile clean-publish-orphans",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "configure",
+            "type": "shell",
+            "command": "make -f docs/Makefile configure",
+            "options": {
+                "statusbar": {
+                    "hide": false
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "htaccess-update",
+            "type": "shell",
+            "command": "make -f docs/Makefile htaccess-update",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "html",
+            "type": "shell",
+            "command": "make -f docs/Makefile html",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [
+                {
+                    "owner": "sphinx",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^(?:.*\\.{3}\\s+)?(\\/[^:]*|[a-zA-Z]:\\\\[^:]*):(\\d+):\\s+(WARNING|ERROR):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                }
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "html-live",
+            "type": "shell",
+            "command": "make -f docs/Makefile html-live",
+            "options": {
+                "statusbar": {
+                    "hide": false
+                }
+            },
+            "problemMatcher": [
+                {
+                    "owner": "sphinx",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^(?:.*\\.{3}\\s+)?(\\/[^:]*|[a-zA-Z]:\\\\[^:]*):(\\d+):\\s+(WARNING|ERROR):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                }
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "mk-my-day",
+            "type": "shell",
+            "windows": {
+                "command": "./mk-my-day.sh"
+            },
+            "options": {
+                "statusbar": {
+                    "hide": false
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "pdf (requires MikTex)",
+            "type": "shell",
+            "command": "make -f docs/Makefile pdf",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [
+                {
+                    "owner": "sphinx",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^(?:.*\\.{3}\\s+)?(\\/[^:]*|[a-zA-Z]:\\\\[^:]*):(\\d+):\\s+(WARNING|ERROR):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                }
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "pdf-live (requires MikTex)",
+            "type": "shell",
+            "command": "make -f docs/Makefile pdf-live",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [
+                {
+                    "owner": "sphinx",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^(?:.*\\.{3}\\s+)?(\\/[^:]*|[a-zA-Z]:\\\\[^:]*):(\\d+):\\s+(WARNING|ERROR):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                }
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "presentation",
+            "type": "shell",
+            "command": "make -f docs/Makefile presentation",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [
+                {
+                    "owner": "sphinx",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^(?:.*\\.{3}\\s+)?(\\/[^:]*|[a-zA-Z]:\\\\[^:]*):(\\d+):\\s+(WARNING|ERROR):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                }
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "presentation-live",
+            "type": "shell",
+            "command": "make -f docs/Makefile presentation-live",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [
+                {
+                    "owner": "sphinx",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^(?:.*\\.{3}\\s+)?(\\/[^:]*|[a-zA-Z]:\\\\[^:]*):(\\d+):\\s+(WARNING|ERROR):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                }
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "publish",
+            "type": "shell",
+            "command": "make -f docs/Makefile publish",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "redirect-check",
+            "type": "shell",
+            "command": "make -f docs/Makefile redirect-check",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "redirect-update",
+            "type": "shell",
+            "command": "make -f docs/Makefile redirect-update",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "sanitize-refs",
+            "type": "shell",
+            "command": "make -f docs/Makefile sanitize-refs",
+            "options": {
+                "statusbar": {
+                    "hide": true
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "save-my-day",
+            "type": "shell",
+            "windows": {
+                "command": "./save-my-day.sh"
+            },
+            "options": {
+                "statusbar": {
+                    "hide": false
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+    ]
+}

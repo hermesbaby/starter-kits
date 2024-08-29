@@ -1,0 +1,5 @@
+ldap-user:
+    - {{ cookiecutter.username }}
+
+ldap-group:
+

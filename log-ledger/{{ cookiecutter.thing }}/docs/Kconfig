@@ -1,0 +1,215 @@
+################################################################
+#                                                              #
+#  This file is part of hermesbaby                             #
+#                       the software engineer's typewriter     #
+#                                                              #
+#  Copyright (c) 2024 Alexander Mann-Wahrenberg (basejumpa)    #
+#                                                              #
+#      https://github.com/basejumpa                            #
+#                                                              #
+#  License(s)                                                  #
+#                                                              #
+#  - MIT for contents used as software                         #
+#  - CC BY-SA-4.0 for contents used as method or otherwise     #
+#                                                              #
+################################################################
+
+menu "Document"
+
+config DOC__TITLE
+    string "Title"
+    default "The Default Title"
+
+
+config DOC__AUTHOR
+    string "Author"
+    default "The Default Author"
+
+
+config DOC__YEAR
+    int "Year"
+    default 1976
+
+
+config DOC__PROJECT
+    string "Project"
+    default "The Default Project"
+
+
+config DOC__LANGUAGE
+    string
+    default "en" if DOC_LANGUAGE_ENGLISH
+    default "de" if DOC_LANGUAGE_GERMAN
+
+    choice
+        prompt "Language"
+        default DOC_LANGUAGE_ENGLISH
+
+    config DOC_LANGUAGE_ENGLISH
+        bool "English"
+
+    config DOC_LANGUAGE_GERMAN
+        bool "German"
+
+    endchoice
+
+
+config DOC__CONFIDENTIALITY_LEVEL_LABEL
+    string
+    default "Confidentiality level" if DOC_LANGUAGE_ENGLISH
+    default "Vertraulichkeitsstufe" if DOC_LANGUAGE_GERMAN
+
+config DOC__CONFIDENTIALITY_LEVEL
+    string
+    default "Public"                if DOC_LANGUAGE_ENGLISH && DOC__CONFIDENTIALITY_PUBLIC
+    default "Internal"              if DOC_LANGUAGE_ENGLISH && DOC__CONFIDENTIALITY_INTERNAL
+    default "Confidential"          if DOC_LANGUAGE_ENGLISH && DOC__CONFIDENTIALITY_CONFIDENTIAL
+    default "Strictly confidential" if DOC_LANGUAGE_ENGLISH && DOC__CONFIDENTIALITY_STRICTLY_CONFIDENTIAL
+    default "Öffentlich"            if DOC_LANGUAGE_GERMAN  && DOC__CONFIDENTIALITY_PUBLIC
+    default "Intern"                if DOC_LANGUAGE_GERMAN  && DOC__CONFIDENTIALITY_INTERNAL
+    default "Vertraulich"           if DOC_LANGUAGE_GERMAN  && DOC__CONFIDENTIALITY_CONFIDENTIAL
+    default "Streng vertraulich"    if DOC_LANGUAGE_GERMAN  && DOC__CONFIDENTIALITY_STRICTLY_CONFIDENTIAL
+
+    choice
+        prompt "Confidentiality Level"
+        default DOC__CONFIDENTIALITY_STRICTLY_CONFIDENTIAL
+
+    config DOC__CONFIDENTIALITY_PUBLIC
+        bool "Public"
+        help
+            The document is public.
+
+    config DOC__CONFIDENTIALITY_INTERNAL
+        bool "Internal"
+        help
+            The document is internal.
+
+    config DOC__CONFIDENTIALITY_CONFIDENTIAL
+        bool "Confidential"
+        help
+            The document is confidential.
+
+    config DOC__CONFIDENTIALITY_STRICTLY_CONFIDENTIAL
+        bool "Strictly confidential"
+        help
+            The document is strictly confidential.
+
+    endchoice
+
+
+endmenu
+
+
+
+menu "CM"
+
+config CM__TICKET_KEY
+    string "Ticket Key"
+    default "PRJ"
+
+endmenu
+
+
+
+menu "SCM"
+
+config SCM__HOST
+    string "Host (with port if necessary)"
+    default "host.some.com:4711"
+
+
+config SCM__OWNER_KIND
+    string
+    default "projects" if SCM__PROJECT
+    default "users"    if SCM__USER
+
+    choice
+        prompt "Kind of owner"
+        default SCM__PROJECT
+
+    config SCM__PROJECT
+        bool "project"
+
+    config SCM__USER
+        bool "user"
+
+    endchoice
+
+
+config SCM__OWNER
+    string "Owner"
+    default "SomeOwner"
+
+
+config SCM__REPO
+    string "Repository"
+    default "SomeRepository"
+
+
+config SCM__REPO__URL_GIT_CLIENT
+    string "URL to repository for git client"
+    default "https://github.com/hermesbaby/some-doc.git"
+
+endmenu
+
+
+
+menu "Build"
+
+config BUILD__DIRS__SOURCE
+    string "Source Directory"
+    default "docs"
+
+config BUILD__DIRS__CONFIG
+    string "Config Directory"
+    default "docs"
+
+config BUILD__DIRS__BUILD
+    string "Build Directory"
+    default "out/docs"
+
+config BUILD__PORTS__HTML__LIVE
+    int "Port for live preview of HTML build"
+    default 1976
+
+config BUILD__PORTS__PRESENTATION__LIVE
+    int "Port for live preview of presentation build"
+    default 1973
+
+endmenu
+
+
+menu "Styling"
+
+config STYLING__COLOR_PRIMARY
+    string "Primary Color"
+    default ""
+    help
+        The primary color of the document.
+        Leave empty for default color.
+        Options are red, pink, purple, deep-purple, indigo, blue,
+        light-blue, cyan, teal, green, light-green, lime, yellow, amber,
+        orange, deep-orange, brown, grey, blue-grey, and white.
+
+config STYLING__COLOR_ACCENT
+    string "Accent Color"
+    default ""
+    help
+        The accent color of the document.
+        Leave empty for default color.
+        Options are red, pink, purple, deep-purple, indigo, blue,
+        light-blue, cyan, teal, green, light-green, lime, yellow, amber,
+        orange, deep-orange, brown, grey, blue-grey, and white.
+
+endmenu
+
+
+
+menu "Publish"
+
+config PUBLISH__HOST
+    string "Host (with port if necessary)"
+    default "docs.some-host.com"
+
+endmenu
+
