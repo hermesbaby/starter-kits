@@ -1,0 +1,1 @@
+Require ldap-user CN={{ cookiecutter.username }},OU=User,OU=some-group,OU=root,DC=some-company,DC=com

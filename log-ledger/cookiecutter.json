@@ -1,0 +1,8 @@
+{
+    "thing": "log-ledger",
+    "username": "steve",
+
+    "_copy_without_render": [
+        "mk-my-day.sh"
+    ]
+}

@@ -1,0 +1,37 @@
+################################################################
+#                                                              #
+#  This file is part of hermesbaby                             #
+#                       the software engineer's typewriter     #
+#                                                              #
+#  Copyright (c) 2024 Alexander Mann-Wahrenberg (basejumpa)    #
+#                                                              #
+#      https://github.com/basejumpa                            #
+#                                                              #
+#  License(s)                                                  #
+#                                                              #
+#  - MIT for contents used as software                         #
+#  - CC BY-SA-4.0 for contents used as method or otherwise     #
+#                                                              #
+################################################################
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+hermesbaby = "^0.3.0"
+sphinx-tags = "^0.3.1"
+sphinx-design = "^0.6.0"
+sphinx-mdinclude = "^0.6.1"
+sphinxext-rediraffe = "^0.2.7"
+
+[tool.poetry.group.dev.dependencies]
+hermesbaby = {extras = ["dev"], version = "^0.3.0"}
+kconfiglib = "^14.1.0"
+windows-curses = "^2.3.3"
+pyyaml = "^6.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
