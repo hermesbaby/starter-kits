@@ -18,7 +18,6 @@
     "vsicons.presets.hideExplorerArrows": true,
     "vsicons.presets.foldersAllDefaultIcon": true,
 
-
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#ff9776",
         "activityBar.background": "#ff9776",
@@ -72,7 +71,8 @@
     "code-eol.crlfCharacter": "¤¬",
 
     "indentRainbow.excludedLanguages": [
-        "yaml"
+        "yaml",
+        "yml",
     ],
 
     "path-autocomplete.triggerOutsideStrings": true,
@@ -81,13 +81,19 @@
     "pasteImage.path": "${currentFileDir}/_figures",
     "pasteImage.prefix": ".. figure:: ",
 
+    "todo-tree.general.tags": [
+        "TODO",
+        ".. todo::",
+        "[ ]",
+        "[x]"
+    ],
+
     "esbonio.server.enabled"         : false,
-    "esbonio.server.enableDevTools"  : false,
+    "esbonio.server.enableDevTools"  : true,
     "esbonio.sphinx.buildCommand"    : ["-W", "-c", "docs/", "docs/", "out/docs/esbonio"],
     "esbonio.preview.showLineMarkers": false,
-    "esbonio.preview.httpPort": 2024,
-    "esbonio.logging.level": "error",
-
+    "esbonio.preview.httpPort"       : 2024,
+    "esbonio.logging.level"          : "error",
 
     "plantuml.jar": ".tools/plantuml.jar",
     "plantuml.lintDiagramNoName": false,
@@ -96,6 +102,11 @@
     ],
     "plantuml.server": "", // Make sure not communicate with internet!
 
+
+    "markdown-pdf.plantumlServer": "",
+
+
     "patternlinks.rules": [
     ],
+
 }

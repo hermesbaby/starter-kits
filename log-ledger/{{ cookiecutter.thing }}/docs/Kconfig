@@ -18,23 +18,27 @@ menu "Document"
 
 config DOC__TITLE
     string "Title"
-    default "The Default Title"
-
+    default "Life is as EasY as YOU Take IT."
 
 config DOC__AUTHOR
     string "Author"
-    default "The Default Author"
+    default "Calidus Callidus"
 
+config DOC__DESCRIPTION
+    string "Description"
+    default "Essays of an easy life taken seriously."
+
+config DOC__KEYWORDS
+    string "Keywords"
+    default "life, essay"
 
 config DOC__YEAR
     int "Year"
     default 1976
 
-
 config DOC__PROJECT
     string "Project"
     default "The Default Project"
-
 
 config DOC__LANGUAGE
     string
@@ -98,7 +102,6 @@ config DOC__CONFIDENTIALITY_LEVEL
 
 
 endmenu
-
 
 
 menu "CM"
@@ -191,7 +194,7 @@ menu "Styling"
 
 config STYLING__COLOR_PRIMARY
     string "Primary Color"
-    default ""
+    default "grey"
     help
         The primary color of the document.
         Leave empty for default color.
@@ -201,7 +204,7 @@ config STYLING__COLOR_PRIMARY
 
 config STYLING__COLOR_ACCENT
     string "Accent Color"
-    default ""
+    default "amber"
     help
         The accent color of the document.
         Leave empty for default color.
@@ -218,6 +221,10 @@ menu "Publish"
 config PUBLISH__HOST
     string "Host (with port if necessary)"
     default "docs.some-host.com"
+
+config PUBLISH__BASEURL
+    string "Base URL"
+    default "https://www.some-host/some/path"
 
 endmenu
 

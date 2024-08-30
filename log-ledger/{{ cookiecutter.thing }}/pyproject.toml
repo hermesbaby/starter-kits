@@ -20,10 +20,15 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "^3.10"
 hermesbaby = "^0.3.0"
-sphinx-tags = "^0.3.1"
+pydata-sphinx-theme = "^0.15.4"
+
 sphinx-design = "^0.6.0"
-sphinx-mdinclude = "^0.6.1"
 sphinxext-rediraffe = "^0.2.7"
+ablog = "^0.11.10"
+sphinx-sitemap = "^2.6.0"
+sphinx-tags = "^0.3.1"
+sphinx-mdinclude = "^0.6.1"
+sphinxcontrib-youtube = "^1.4.1"
 
 [tool.poetry.group.dev.dependencies]
 hermesbaby = {extras = ["dev"], version = "^0.3.0"}

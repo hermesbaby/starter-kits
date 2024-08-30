@@ -44,8 +44,11 @@ __pycache__/
 
 # Junction to today's folder
 /today/
+/thisweek/
 
 # Backup and intermediate files of configuration
 .config.old
 config.py
+
+### EOF
 
