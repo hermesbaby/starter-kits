@@ -1,33 +1,37 @@
-//###############################################################
-//#                                                             
+//################################################################
+//#                                                              #
 //#  This file is part of {{ cookiecutter.thing }}
-//#
-//#  Copyright (c) 2024 Alexander Mann-Wahrenberg (basejumpa)
-//#
-//#      https://github.com/basejumpa
-//#
-//#  License(s)
-//#  
-//#  - MIT for contents used as software
-//#  - CC BY-SA-4.0 for contents used as method or otherwise
-//#  
-//###############################################################
+//#                                                              #
+//#  Copyright (c) 2024 Alexander Mann-Wahrenberg (basejumpa)    #
+//#                                                              #
+//#      https://github.com/basejumpa                            #
+//#                                                              #
+//#  License(s)                                                  #
+//#                                                              #
+//#  - MIT for contents used as software                         #
+//#  - CC BY-SA-4.0 for contents used as method or otherwise     #
+//#                                                              #
+//################################################################
 
 {
     "recommendations": [
         "vscode-icons-team.vscode-icons",
+        "johnpapa.vscode-peacock",
 
         "editorconfig.editorconfig",
         "medo64.render-crlf",
-        "oderwat.indent-rainbow",
         "miku3920.vscode-render-special-chars",
+        "oderwat.indent-rainbow",
+        "mechatroner.rainbow-csv",
+
+        "alefragnani.bookmarks",
+        "gruntfuggly.todo-tree",
 
         "mhutchie.git-graph",
-        "donjayamanne.githistory",
-        "waderyan.gitblame",
+        "adam-bender.commit-message-editor",
         "solomonkinard.git-blame",
         "david-rickard.git-diff-and-merge-tool",
+        "ryu1kn.partial-diff",
         "scootersoftware.bcompare-vscode",
-        "adam-bender.commit-message-editor"
     ]
 }

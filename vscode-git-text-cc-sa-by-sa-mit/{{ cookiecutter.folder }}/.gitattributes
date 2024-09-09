@@ -1,18 +1,17 @@
-###############################################################
-#                                                             
+################################################################
+#                                                              #
 #  This file is part of {{ cookiecutter.thing }}
-#
-#  Copyright (c) 2024 Alexander Mann-Wahrenberg (basejumpa)
-#
-#      https://github.com/basejumpa
-#
-#  License(s)
-#  
-#  - MIT for contents used as software
-#  - CC BY-SA-4.0 for contents used as method or otherwise
-#  
-###############################################################
-
+#                                                              #
+#  Copyright (c) 2024 Alexander Mann-Wahrenberg (basejumpa)    #
+#                                                              #
+#      https://github.com/basejumpa                            #
+#                                                              #
+#  License(s)                                                  #
+#                                                              #
+#  - MIT for contents used as software                         #
+#  - CC BY-SA-4.0 for contents used as method or otherwise     #
+#                                                              #
+################################################################
 
 # Make git treats all files as non-text when doing line-ending-normalization, disabling it completely. Other text-specific git commands are unaffected
 * -text
